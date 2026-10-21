@@ -1,0 +1,68 @@
+# Dependencies
+node_modules/
+.pnp/
+.pnp.js
+
+# Next.js build
+.next/
+out/
+build/
+
+# Production
+dist/
+
+# Environment variables — NEVER commit these
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+logs/
+
+# Coverage
+coverage/
+.nyc_output/
+
+# Testing
+playwright-report/
+test-results/
+e2e-results/
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# Secrets & certificates
+*.pem
+*.key
+*.cert
+ssl/
+
+# Sentry
+.sentry-native/
+sentry.properties
+
+# Vercel
+.vercel/
+
+# Misc
+.cache/
+tmp/
+temp/
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts

@@ -1,0 +1,189 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap');
+
+:root {
+  --font-inter:     'Inter', sans-serif;
+  --font-playfair:  'Playfair Display', serif;
+}
+
+/* 
+  Theme 1: Midnight Luxe (Default Dark)
+  Deep plum/blue-black base, soft gold
+*/
+.dark, :root[class~="dark"] {
+  --color-obsidian-950: #0a0b12; 
+  --color-obsidian-900: #10121a;
+  --color-obsidian-800: #1b1e2b;
+  --color-obsidian-700: #292d3f;
+  --color-obsidian-600: #3a3f55;
+  --color-obsidian-500: #505670;
+  --color-obsidian-400: #6e7592;
+  --color-obsidian-300: #9399b2;
+  --color-obsidian-200: #bac0d2;
+  --color-obsidian-100: #e2e5f0;
+  --color-obsidian-50:  #f4f6fa;
+
+  --color-gold-950: #302500;
+  --color-gold-900: #524005;
+  --color-gold-800: #7a600a;
+  --color-gold-700: #9e7d0f;
+  --color-gold-600: #c29c15;
+  --color-gold-500: #e0b82b; /* Soft premium gold */
+  --color-gold-400: #f1cf54;
+  --color-gold-300: #f8e17a;
+  --color-gold-200: #fbf1aa;
+  --color-gold-100: #fdf8d4;
+  --color-gold-50:  #fefce8;
+
+  color-scheme: dark;
+}
+
+/* 
+  Theme 2: Classic Light 
+*/
+.light, :root[class~="light"] {
+  --color-obsidian-950: #f8fafc;
+  --color-obsidian-900: #ffffff;
+  --color-obsidian-800: #e2e8f0;
+  --color-obsidian-700: #cbd5e1;
+  --color-obsidian-600: #94a3b8;
+  --color-obsidian-500: #64748b;
+  --color-obsidian-400: #475569;
+  --color-obsidian-300: #334155;
+  --color-obsidian-200: #1e293b;
+  --color-obsidian-100: #0f172a;
+  --color-obsidian-50:  #020617;
+
+  --color-gold-950: #fefce8;
+  --color-gold-900: #fef9c3;
+  --color-gold-800: #fef08a;
+  --color-gold-700: #fde047;
+  --color-gold-600: #facc15;
+  --color-gold-500: #B8960C; /* Darker gold for contrast on light */
+  --color-gold-400: #92740A;
+  --color-gold-300: #78610D;
+  --color-gold-200: #66500F;
+  --color-gold-100: #3A2D00;
+  --color-gold-50:  #1d1600;
+
+  color-scheme: light;
+}
+
+/* 
+  Theme 3: Emerald Prestige 
+  Forest green base, vibrant emerald/gold
+*/
+.emerald, :root[class~="emerald"] {
+  --color-obsidian-950: #02110a;
+  --color-obsidian-900: #042114;
+  --color-obsidian-800: #073b24;
+  --color-obsidian-700: #0a5736;
+  --color-obsidian-600: #107a4d;
+  --color-obsidian-500: #16a366;
+  --color-obsidian-400: #34d399;
+  --color-obsidian-300: #6ee7b7;
+  --color-obsidian-200: #a7f3d0;
+  --color-obsidian-100: #d1fae5;
+  --color-obsidian-50:  #ecfdf5;
+
+  --color-gold-950: #062a12;
+  --color-gold-900: #0d4a22;
+  --color-gold-800: #147035;
+  --color-gold-700: #1b9148;
+  --color-gold-600: #22c55e;
+  --color-gold-500: #4ade80; /* Emerald green accent */
+  --color-gold-400: #86efac;
+  --color-gold-300: #bbf7d0;
+  --color-gold-200: #dcfce7;
+  --color-gold-100: #f0fdf4;
+  --color-gold-50:  #f8fafc;
+
+  color-scheme: dark;
+}
+
+/* 
+  Theme 4: Ruby Royal 
+  Deep burgundy base, rose-gold
+*/
+.ruby, :root[class~="ruby"] {
+  --color-obsidian-950: #1c050a;
+  --color-obsidian-900: #2e0912;
+  --color-obsidian-800: #4f0e1d;
+  --color-obsidian-700: #75142a;
+  --color-obsidian-600: #a31c3a;
+  --color-obsidian-500: #d4244b;
+  --color-obsidian-400: #e84a6b;
+  --color-obsidian-300: #f27c95;
+  --color-obsidian-200: #faaec0;
+  --color-obsidian-100: #fce3e8;
+  --color-obsidian-50:  #fef2f5;
+
+  --color-gold-950: #2d1017;
+  --color-gold-900: #4a1926;
+  --color-gold-800: #70263a;
+  --color-gold-700: #99334e;
+  --color-gold-600: #c44163;
+  --color-gold-500: #fb7185; /* Rose gold/ruby accent */
+  --color-gold-400: #fda4af;
+  --color-gold-300: #fecdd3;
+  --color-gold-200: #ffe4e6;
+  --color-gold-100: #fff1f2;
+  --color-gold-50:  #fffbfa;
+
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-obsidian-950);
+  color: var(--color-obsidian-100);
+  font-family: var(--font-inter);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar       { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: color-mix(in srgb, var(--color-gold-500) 20%, transparent); border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: color-mix(in srgb, var(--color-gold-500) 40%, transparent); }
+
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Gold shimmer */
+.shimmer {
+  background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--color-gold-500) 15%, transparent), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s linear infinite;
+}
+
+/* Glassmorphism */
+.glass {
+  background: rgba(255,255,255,0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.light .glass {
+  background: rgba(0,0,0,0.03);
+}
+
+/* Focus ring */
+:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--color-gold-500) 50%, transparent);
+  outline-offset: 2px;
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}

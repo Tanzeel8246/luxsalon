@@ -1,0 +1,28 @@
+{
+  "name": "LuxSalon — Smart Groom Center",
+  "short_name": "LuxSalon",
+  "description": "Premium salon management & booking system",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A0A0A",
+  "theme_color": "#D4AF37",
+  "orientation": "portrait-primary",
+  "categories": ["lifestyle", "business"],
+  "icons": [
+    { "src": "/icons/icon-72.png",   "sizes": "72x72",   "type": "image/png" },
+    { "src": "/icons/icon-96.png",   "sizes": "96x96",   "type": "image/png" },
+    { "src": "/icons/icon-128.png",  "sizes": "128x128", "type": "image/png" },
+    { "src": "/icons/icon-144.png",  "sizes": "144x144", "type": "image/png" },
+    { "src": "/icons/icon-192.png",  "sizes": "192x192", "type": "image/png" },
+    { "src": "/icons/icon-512.png",  "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Book Appointment", "url": "/booking",   "description": "Book a new appointment" },
+    { "name": "Live Queue",       "url": "/queue",     "description": "Check queue status" },
+    { "name": "Dashboard",        "url": "/dashboard", "description": "View dashboard" }
+  ],
+  "screenshots": [
+    { "src": "/screenshots/dashboard.png", "sizes": "1280x720", "type": "image/png", "label": "Dashboard" },
+    { "src": "/screenshots/booking.png",   "sizes": "1280x720", "type": "image/png", "label": "Booking Wizard" }
+  ]
+}

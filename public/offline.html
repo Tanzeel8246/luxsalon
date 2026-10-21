@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>LuxSalon — Offline</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',sans-serif;background:#0A0A0A;color:#fff;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px}
+.icon{font-size:64px;margin-bottom:20px}
+h1{font-size:24px;font-weight:700;color:#D4AF37;margin-bottom:10px}
+p{color:#9ca3af;font-size:14px;margin-bottom:24px;max-width:320px}
+button{background:linear-gradient(135deg,#D4AF37,#F4E06B);color:#0A0A0A;border:none;padding:12px 28px;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer}
+button:hover{opacity:.9}
+.cached{margin-top:24px;padding:12px 20px;border-radius:10px;background:rgba(212,175,55,.1);border:1px solid rgba(212,175,55,.25);font-size:13px;color:#D4AF37;max-width:320px}
+</style>
+</head>
+<body>
+<div>
+  <div class="icon">📡</div>
+  <h1>You're Offline</h1>
+  <p>No internet connection. Some features are available in read-only mode from cache.</p>
+  <button onclick="location.reload()">Try Again</button>
+  <div class="cached">
+    Cached pages available: Dashboard · Queue · Booking
+  </div>
+</div>
+<script>
+  window.addEventListener('online', () => location.reload())
+</script>
+</body>
+</html>

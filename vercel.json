@@ -1,0 +1,55 @@
+{
+  "framework": "nextjs",
+  "buildCommand": "npm run build",
+  "devCommand": "npm run dev",
+  "installCommand": "npm ci",
+  "regions": ["iad1", "sin1"],
+  "functions": {
+    "app/api/stripe-webhook/route.ts": {
+      "maxDuration": 30,
+      "memory": 512
+    },
+    "app/api/whatsapp-webhook/route.ts": {
+      "maxDuration": 15
+    },
+    "app/api/reports/route.ts": {
+      "maxDuration": 60,
+      "memory": 1024
+    },
+    "app/api/ai/forecast/route.ts": {
+      "maxDuration": 30
+    }
+  },
+  "headers": [
+    {
+      "source": "/sw.js",
+      "headers": [
+        { "key": "Cache-Control",        "value": "no-cache, no-store, must-revalidate" },
+        { "key": "Service-Worker-Allowed", "value": "/" }
+      ]
+    },
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options",        "value": "DENY" }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/api/stripe-webhook",
+      "destination": "/api/stripe-webhook"
+    }
+  ],
+  "crons": [
+    {
+      "path": "/api/cron/reminders",
+      "schedule": "*/15 * * * *"
+    },
+    {
+      "path": "/api/cron/daily",
+      "schedule": "0 2 * * *"
+    }
+  ]
+}
